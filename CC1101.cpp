@@ -1,5 +1,5 @@
 /*
- * Author: Klusjesman, modified bij supersjimmie for Arduino/ESP8266
+ * Author: Klusjesman, modified bij J. Vinckers Tu use with ESP32-S3
  */
 
 #include "CC1101.h"
@@ -8,6 +8,7 @@
 CC1101::CC1101()
 {
 	SPI.begin();
+	SPI.begin(12, 13, 12, 14);
 #ifdef ESP8266
 	pinMode(SS, OUTPUT);
 #endif
